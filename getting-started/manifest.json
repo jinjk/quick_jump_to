@@ -1,0 +1,23 @@
+{
+  "name": "Quick Jump",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  },
+  "permissions": [
+    "clipboardRead",
+    "contextMenus"
+  ],
+  "commands": {
+    "goto-new-page": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Command+Shift+G"
+      },
+      "description": "Run \"foo\" on the current page."
+    }
+  },
+  "options_page": "options.html"
+}
