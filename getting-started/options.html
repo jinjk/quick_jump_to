@@ -7,18 +7,28 @@
 </head>
 
 <body>
-  <form class="pure-form pure-form-aligned">
-    <fieldset>
-        <div class="pure-control-group">
-            <label for="aligned-url">Jira Site URL</label>
-            <input type="text" id="aligned-url" placeholder="jira site url, e.g. https://jira.yourcompanyname.com" />
-        </div>
-        <div class="pure-control-group">
-            <label></label>
-            <button class="pure-button pure-button-primary">Update</button>
-        </div>
-    </fieldset>
-  </form>
+  <div class="main-container">
+    <form class="pure-form pure-g">
+      <div class="div-right pure-u-1-4">
+        <label class="pure-input-1" for="input_site_url">Jira Site URL</label>
+      </div>
+      <div class="pure-u-3-4">
+        <input class="pure-input-1" type="text" id="input_site_url"
+          placeholder="jira site url, e.g. https://jira.yourcompanyname.com" />
+      </div>
+      <div class="div-right pure-u-1-4">
+        <label class="pure-input-1" for="input_config">Config</label>
+      </div>
+      <div class="pure-u-3-4">
+        <textarea class="pure-input-1" id="input_config" rows="10"></textarea>
+      </div>
+      <div class="pure-u-1-4"></div>
+      <div class="pure-u-3-4">
+        <button class="pure-button pure-button-primary" id="confirm_btn">Update</button>
+      </div>
+    </form>
+  </div>
 </body>
 <script src="options.js"></script>
+
 </html>

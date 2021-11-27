@@ -255,6 +255,7 @@ html {
   word-spacing: normal;
   vertical-align: top;
   text-rendering: auto;
+  padding: 0.5em;
 }
 .pure-u-1-24 {
   width: 4.1667%;

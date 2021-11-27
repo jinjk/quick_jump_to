@@ -25,25 +25,6 @@ label {
 }
 
 /*
- * -- PURE FORM STYLES --
- * Style the form inputs and labels
- */
-.pure-form label {
-    margin: 1em 0 0;
-    font-weight: bold;
-    font-size: 100%;
-    width:40%
-}
-
-.pure-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 100%;
-    width: 60%;
-    margin-bottom: 1em;
-}
-
-/*
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
@@ -61,3 +42,13 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
+.div-right {
+    text-align: right;
+}
+
+.main-container {
+    padding: 0 1% 0 1%;
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto
+}
