@@ -1,4 +1,5 @@
 var globalConfig = [];
+var globalJiraSiteUrl = '';
 
 function getJiraSiteUrl() {
     jiraSiteUrl = '';
@@ -48,8 +49,14 @@ function save_options() {
             return;
         }
     }
-    updateJiraSiteUrl(jiraSiteUrl);
-    jsonStr = JSON.stringify(globalConfig);
+    if (jiraSiteUrl != globalJiraSiteUrl) {
+        updateJiraSiteUrl(jiraSiteUrl);
+    }
+    else {
+        globalJiraSiteUrl = getJiraSiteUrl();
+        document.getElementById('input_site_url').value = globalJiraSiteUrl;
+    }
+    jsonStr = JSON.stringify(globalConfig, null, 2);
     chrome.storage.sync.set({
         configDoc: jsonStr
     }, function () {
@@ -70,8 +77,8 @@ function restore_options() {
         configDoc: '[]'
     }, function (items) {
         globalConfig = JSON.parse(items.configDoc);
-        var jiraSiteUrl = getJiraSiteUrl();
-        document.getElementById('jiraSiteUrl').value = jiraSiteUrl;
+        globalJiraSiteUrl = getJiraSiteUrl();
+        document.getElementById('input_site_url').value = globalJiraSiteUrl;
         document.getElementById('input_config').value = items.configDoc;
     });
 }

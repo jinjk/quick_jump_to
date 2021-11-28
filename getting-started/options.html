@@ -8,16 +8,16 @@
 
 <body>
   <div class="main-container">
-    <form class="pure-form pure-g">
+    <div class="pure-form pure-g">
       <div class="div-right pure-u-1-4">
-        <label class="pure-input-1" for="input_site_url">Jira Site URL</label>
+        <label class="pure-input-1">Jira Site URL</label>
       </div>
       <div class="pure-u-3-4">
         <input class="pure-input-1" type="text" id="input_site_url"
           placeholder="jira site url, e.g. https://jira.yourcompanyname.com" />
       </div>
       <div class="div-right pure-u-1-4">
-        <label class="pure-input-1" for="input_config">Config</label>
+        <label class="pure-input-1">Config</label>
       </div>
       <div class="pure-u-3-4">
         <textarea class="pure-input-1" id="input_config" rows="10"></textarea>
@@ -26,8 +26,10 @@
       <div class="pure-u-1-4">
         <button class="pure-button pure-button-primary" id="save">Update</button>
       </div>
-      <div class="pure-u-2-4" id="status"></div>
-    </form>
+      <div class="pure-u-1-2">
+        <span id="status"></span>
+      </div>
+    </div>
   </div>
 </body>
 <script src="options.js"></script>
