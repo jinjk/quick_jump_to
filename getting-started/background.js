@@ -42,7 +42,7 @@ function load_options() {
       configDoc: '[]'
   }, function (items) {
       globalConfig = JSON.parse(items.configDoc);
-      globalJiraSiteUrl = getJiraSiteUrl();
+      globalConfig = globalConfig.sort((a, b) => a.index - b.index);
   });
 }
 load_options();
