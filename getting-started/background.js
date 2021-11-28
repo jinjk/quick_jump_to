@@ -10,7 +10,7 @@ chrome.commands.onCommand.addListener((command) => {
     if (str) {
       str = str.trim();
       for (item of globalConfig) {
-        let re = new Regexp(item.regex);
+        let re = new RegExp(item.regex);
         if (re.test(str)) {
           let newURL = item.url + str;
           chrome.tabs.create({ url: newURL });

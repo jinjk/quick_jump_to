@@ -54,9 +54,10 @@ function save_options() {
     }
     else {
         globalJiraSiteUrl = getJiraSiteUrl();
-        document.getElementById('input_site_url').value = globalJiraSiteUrl;
     }
     jsonStr = JSON.stringify(globalConfig, null, 2);
+    document.getElementById('input_site_url').value = globalJiraSiteUrl;
+    document.getElementById('input_config').value = jsonStr;
     chrome.storage.sync.set({
         configDoc: jsonStr
     }, function () {
