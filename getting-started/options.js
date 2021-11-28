@@ -26,7 +26,7 @@ function updateJiraSiteUrl(jiraUrl) {
         item = {
             index: 1,
             url: jiraUrl,
-            regex: '.*'
+            regex: '^.*$'
         }
         globalConfig.push(item);
     }
