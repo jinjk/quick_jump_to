@@ -46,6 +46,14 @@ a.pure-button-primary {
     text-align: right;
 }
 
+.message[messageType="error"] {
+    color: red;
+}
+
+.message[messageType="info"] {
+    color: #34495e;
+}
+
 .main-container {
     padding: 0 1% 0 1%;
     box-sizing: border-box;
