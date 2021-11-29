@@ -1,8 +1,10 @@
+import {util} from './util.js';
+
 var globalConfig = [];
 var globalJiraSiteUrl = '';
 
 function getJiraSiteUrl() {
-    jiraSiteUrl = '';
+    let jiraSiteUrl = '';
     if (globalConfig.length > 0) {
         let item = globalConfig[0];
         jiraSiteUrl = item.url;
@@ -17,7 +19,7 @@ function updateJiraSiteUrl(jiraUrl) {
         found = true;
     }
     else {
-        item = {
+        let item = {
             index: 1,
             url: jiraUrl,
             regex: '\\w+-\\w+'
@@ -34,8 +36,7 @@ function save_options() {
     status.textContent = '';
     if (jsonStr) {
         try {
-            globalConfig = JSON.parse(jsonStr);
-            globalConfig = globalConfig.sort((a, b) => a.index - b.index);
+            globalConfig = util.parseConfig(jsonStr);
         }
         catch (e) {
             status.setAttribute("messageType", "error");
@@ -69,8 +70,7 @@ function restore_options() {
     chrome.storage.sync.get({
         configDoc: '[]'
     }, function (items) {
-        globalConfig = JSON.parse(items.configDoc);
-        globalConfig = globalConfig.sort((a, b) => a.index - b.index);
+        globalConfig = util.parseConfig(items.configDoc);
         globalJiraSiteUrl = getJiraSiteUrl();
         document.getElementById('input_site_url').value = globalJiraSiteUrl;
         document.getElementById('input_config').value = items.configDoc;

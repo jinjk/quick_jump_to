@@ -1,5 +1,6 @@
+import {util} from './util.js';
+
 var globalConfig = [];
-var globalJiraSiteUrl;
 
 chrome.commands.onCommand.addListener((command) => {
   console.log(`command: ${command}`);
@@ -8,7 +9,7 @@ chrome.commands.onCommand.addListener((command) => {
     console.log(`clipboard: ${str}`);
     if (str) {
       str = str.trim();
-      for (item of globalConfig) {
+      for (let item of globalConfig) {
         let re = new RegExp(item.regex);
         if (re.test(str)) {
           let newURL = item.url + str;
@@ -40,8 +41,7 @@ function load_options() {
   chrome.storage.sync.get({
       configDoc: '[]'
   }, function (items) {
-      globalConfig = JSON.parse(items.configDoc);
-      globalConfig = globalConfig.sort((a, b) => a.index - b.index);
+      globalConfig = util.parseConfig(items.configDoc);
   });
 }
 load_options();
