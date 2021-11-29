@@ -17,7 +17,7 @@
         "default": "Ctrl+Shift+K",
         "mac": "Command+Shift+K"
       },
-      "description": "Run \"foo\" on the current page."
+      "description": "Goto a page with key in clipboard"
     }
   },
   "options_page": "options.html"
