@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="width: 500px; height: 200px;">
+
+<head>
+  <link rel="stylesheet" href="pure-min-2.0.6.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="width: 500px; height: 200px;">
+    <div class="pure-form pure-g">
+      <div class="pure-u-1-1">
+        <label class="pure-input-1">Copy the key (jira ticket ID or any other resource ID), then open new tab with <br/> Ctrl-Shift-K (Mac: Cmd-Shift-K)</label>
+      </div>
+      <div class="div-right pure-u-1-4">
+        <label class="pure-input-1">Jira Site URL</label>
+      </div>
+      <div class="pure-u-3-4">
+        <input class="pure-input-1" type="text" id="input_site_url"
+          placeholder="jira site url, e.g. https://companyname.com/browse/" />
+      </div>
+      <div class="div-right pure-u-1-4">
+        <label class="pure-input-1">Config</label>
+      </div>
+      <div class="pure-u-3-4">
+        <textarea class="pure-input-1" id="input_config" rows="10"></textarea>
+      </div>
+      <div class="pure-u-1-4"></div>
+      <div class="pure-u-1-4">
+        <button class="pure-button pure-button-primary" id="save">Update</button>
+      </div>
+      <div class="pure-u-1-2">
+        <span class="message" messageType="error" id="status"></span>
+      </div>
+    </div>
+</body>
+<script type="module" src="./options.js"></script>
+
+</html>

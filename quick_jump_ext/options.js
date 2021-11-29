@@ -16,7 +16,6 @@ function updateJiraSiteUrl(jiraUrl) {
     if (globalConfig.length > 0) {
         let item = globalConfig[0];
         item.url = jiraUrl;
-        found = true;
     }
     else {
         let item = {
