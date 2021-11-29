@@ -1,4 +1,3 @@
-var jiraBaseURL = 'https://product-jira.ariba.com/browse/';
 var globalConfig = [];
 var globalJiraSiteUrl;
 

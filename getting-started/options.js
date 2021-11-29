@@ -51,6 +51,7 @@ function save_options() {
     }
     if (jiraSiteUrl != globalJiraSiteUrl) {
         updateJiraSiteUrl(jiraSiteUrl);
+        globalJiraSiteUrl = jiraSiteUrl;
     }
     else {
         globalJiraSiteUrl = getJiraSiteUrl();
