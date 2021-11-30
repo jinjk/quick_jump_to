@@ -1,5 +1,5 @@
 {
-  "name": "Quick Jump",
+  "name": "Open Jira Page Shortcut",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This extension provides a shortcut to navigate to a jira ticket page using the key in clipboard",
@@ -14,7 +14,6 @@
   },
   "permissions": [
     "clipboardRead",
-    "contextMenus",
     "storage"
   ],
   "commands": {
