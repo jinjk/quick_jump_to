@@ -60,3 +60,9 @@ a.pure-button-primary {
     width: 70%;
     margin: 0 auto
 }
+
+kbd {
+    border-radius: 2px;
+    padding: 2px;
+    border: 1px solid black;
+  }
